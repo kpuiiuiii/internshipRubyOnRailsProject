@@ -1,0 +1,20 @@
+Enter new transaction information: <br />
+<%= form_for @transaction do |f| -%>
+    Name: <%= f.text_field :name %> <br />
+    Type: <%= f.text_field :type %> <br />
+    Date: <%= f.text_field :date %> <br />
+    Amount: <%= f.text_field :amount %> <br />
+    <%= f.submit %>
+<% end -%>
+
+<hr />
+
+
+List: <br />
+<%if !@transactions.blank? %>
+   <% for item in @transactions %>
+   <%= item.name %> (<%= item.type%>) <br />
+   <% end %>
+<% else %>
+
+ <% end %>
